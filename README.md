@@ -6,8 +6,9 @@ Slang Shader
 ## Environment Setup
 
 ```
-$ pip install pipenv
 $ cd slang-shader-tutorial
+
+$ pip install pipenv
 $ pipenv install
 ```
 

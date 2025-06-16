@@ -16,5 +16,6 @@ $ pipenv install
 
 ```
 $ cd print
+$ pipenv shell
 $ python print.py
 ```

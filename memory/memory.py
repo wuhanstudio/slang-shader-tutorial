@@ -30,5 +30,11 @@ buffer_a = device.create_buffer(
 
 kernel.dispatch(thread_count=[10, 1, 1], a=buffer_a)
 
-print("===== GPU =====")
+print("===== CPU to GPU =====")
 device.flush_print()
+
+print("===== GPU to CPU =====")
+array_gpu = buffer_a.to_numpy().view(np.float32).reshape((2, 2, 3))
+array_gpu = array.flatten()
+for i in range(len(array_gpu)):
+    print(f"array[{i}] = {array_gpu[i]}")
